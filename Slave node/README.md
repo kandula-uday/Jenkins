@@ -10,7 +10,7 @@ There are two ways of authentication for setting up the Linux Jenkins slave agen
 It is recommended to execute all Jenkins jobs as a jenkins user on the jenkins agent nodes
 
 #### Step 1
-Create a Jenkins User
+Create a Jenkins User.
 ``` sudo adduser jenkins ```
 Create a password for user jenkins
 ``` sudo passwd jenkins ```
