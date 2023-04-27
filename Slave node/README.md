@@ -44,11 +44,41 @@ Fallow the below path
 * Fill the form give name, description 
   * **No Of Executors** --> how many concurrent builds the node can handle.
   * **Remote File System Root** --> Specify the usage directory on the node where Jenkins will store build artifacts and workspace files.
-  * **Labels ** --> Labels allow you to define the capabilities of a node and then assign jobs to that node based on the labels assigned.
+  * **Labels** --> Labels allow you to define the capabilities of a node and then assign jobs to that node based on the labels assigned.
   * **Usage** --> Use this node as much as possible.
   * **Launch Method** --> Launch Agents Vis SSH.
     * Give host address of agent
     * Select **ADD** give **Username** and **Password** of Jenkins User which was created at creation of Slave Server.
 
 ![](https://github.com/kandula-uday/Jenkins/blob/main/Slave%20node/connection.png) 
+
+Once you click save, Jenkins will automatically connect to the slave machine and configure it as an agent.
+
+# Setting up Jenkins slaves using ssh keys
+
+* Login to Slava server as jenkins user
+
+* Create an .SSH and cd into the directory.
+
+``` mkdir ~/.ssh && cd ~/.ssh ```
+
+* Create an ssh key pair using the following command. Press enter for all the defaults when prompted.
+
+``` ssh-keygen -t rsa -C "The access key for Jenkins agent" ```
+
+* Add the public to authorized_keys file using the following command.
+
+``` cat id_rsa.pub >> ~/.ssh/authorized_keys ```
+
+* Now, copy the contents of the private key to the clipboard.
+
+``` cat id_rsa ```
+
+# Add the SSH Private Key to Jenkins Credentials
+
+* got to Jenkins Dashboard --> Manage Jenkins --> Credentials --> System --> Global Credentials 
+
+* Paste the copied key as shown below
+
+![]()
 
