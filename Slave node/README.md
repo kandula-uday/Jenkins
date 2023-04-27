@@ -80,5 +80,5 @@ Once you click save, Jenkins will automatically connect to the slave machine and
 
 * Paste the copied key as shown below
 
-![]()
+![](https://github.com/kandula-uday/Jenkins/blob/main/Slave%20node/ssh_jenkins.png)
 
