@@ -11,14 +11,24 @@ It is recommended to execute all Jenkins jobs as a jenkins user on the jenkins a
 
 #### Step 1
 Create a Jenkins User
+
 ``` sudo adduser jenkins ```
+
 Create a password for user jenkins
+
 ``` sudo passwd jenkins ```
+
 Open the /etc/ssh/sshd_config file with a text editor
+
 ``` #PasswordAuthentication yes ```
+
 Uncomment the line by removing the # character at the beginning of the line. Change the value to yes.
+
 Restart the SSH service for the changes to take effect
+
 ``` systemctl restart sshd ```
 
+# Setting Up Jenkins Slave/Agent using username and password
 
+* Manage 
 
