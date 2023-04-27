@@ -32,5 +32,12 @@ Restart the SSH service for the changes to take effect
 Fallow the below path 
 
 * Jenkins Dashboard --> Manage Jenkins --> Manage Nodes and Clouds  
+
 ![](https://github.com/kandula-uday/Jenkins/blob/main/Slave%20node/mngnodesandclouds.png)
+
+* select new node, Give it a name, select the “permanent agent” option and click ok
+
+![](https://github.com/kandula-uday/Jenkins/blob/main/Slave%20node/newnode.png)
+
+![](https://github.com/kandula-uday/Jenkins/blob/main/Slave%20node/nodecreation.png)
 
