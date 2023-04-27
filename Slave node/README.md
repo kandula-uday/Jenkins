@@ -11,7 +11,6 @@ It is recommended to execute all Jenkins jobs as a jenkins user on the jenkins a
 
 #### Step 1
 Create a Jenkins User
-
 ``` sudo adduser jenkins ```
 
 Create a password for user jenkins
