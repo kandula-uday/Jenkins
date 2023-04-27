@@ -32,5 +32,5 @@ Restart the SSH service for the changes to take effect
 Fallow the below path 
 
 * Jenkins Dashboard --> Manage Jenkins --> Manage Nodes and Clouds  
-!(https://github.com/kandula-uday/Jenkins/blob/main/Slave%20node/mngnodesandclouds.png)
+![](https://github.com/kandula-uday/Jenkins/blob/main/Slave%20node/mngnodesandclouds.png)
 
