@@ -41,3 +41,14 @@ Fallow the below path
 
 ![](https://github.com/kandula-uday/Jenkins/blob/main/Slave%20node/nodecreation.png)
 
+* Fill the form give name, description 
+  * ** No Of Executors ** --> how many concurrent builds the node can handle.
+  * ** Remote File System Root" ** --> Specify the usage directory on the node where Jenkins will store build artifacts and workspace files.
+  * ** Labels ** --> Labels allow you to define the capabilities of a node and then assign jobs to that node based on the labels assigned.
+  * ** Usage ** --> Use this node as much as possible.
+  * ** Launch Method ** --> Launch Agents Vis SSH.
+    * Give host address of agent
+    * Select **ADD** give **Username** and **Password** of Jenkins User which was created at creation of Slave Server.
+
+![](https://github.com/kandula-uday/Jenkins/blob/main/Slave%20node/connection.png) 
+
