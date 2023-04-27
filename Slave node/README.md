@@ -29,5 +29,8 @@ Restart the SSH service for the changes to take effect
 
 # Setting Up Jenkins Slave/Agent using username and password
 
-* Manage 
+Fallow the below path 
+
+* Jenkins Dashboard --> Manage Jenkins --> Manage Nodes and Clouds  
+!(https://github.com/kandula-uday/Jenkins/blob/main/Slave%20node/mngnodesandclouds.png)
 
