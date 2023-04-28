@@ -106,10 +106,17 @@ Once you click save, Jenkins will automatically connect to the slave machine and
    	- Bring this agent online when in demand, and take offline when idle 
 
 2. Once you save above configuration you will get a command which should be executed in the agent. it contains agent.jar, a secret-file, and a jnlp file 
+
+3. Copy the jar file to the jenkins slave server. execute the below commands. this will setup the connection with master node.
+
 ```sh
      echo "secret_key" > secret-file
      java -jar agent.jar -jnlpUrl http://<Jenkins_URL>/computer/abc/jenkins-agent.jnlp -secret @secret-file -workDir "/home/jenkins/jenkins-slave"
    ```
 
-3. Once connected you can create or edit a job to chose this option in the `Restrict where this project can be run`
+4. Once connected you can create or edit a job to chose this option in the `Restrict where this project can be run`
+
+![](https://github.com/kandula-uday/Jenkins/blob/main/Slave%20node/agentjatcommand.png)
+
+![](https://github.com/kandula-uday/Jenkins/blob/main/Slave%20node/Screenshot%202023-04-27%20at%202.09.13%20PM.png)
 
