@@ -1,4 +1,4 @@
-# Setup Jenkins Agent/Slave Using SSH [Password & SSH Key]
+# Setup Jenkins Agent/Slave Using SSH [Password,SSH Key & Agent.Jar] 
 One of the best features of Jenkins is its distributed nature. You can configure multiple build slaves for better segregation and scalability
 
 # Setup Jenkins Agent/Slaves on Jenkins
@@ -81,4 +81,35 @@ Once you click save, Jenkins will automatically connect to the slave machine and
 * Paste the copied key as shown below
 
 ![](https://github.com/kandula-uday/Jenkins/blob/main/Slave%20node/ssh_jenkins.png)
+
+# Setting up jenkins slaves using Agent.jar File
+
+1. Provide below information to add Jenkins agent  
+   **Name:** uniquely identifies an agent within this Jenkins installation  
+   **Description:** <Description>  
+   **Number of executors:** 2  
+   **Remote root directory:** /home/jenkins/jenkins-agent   
+   **Labels:** Labels (or tags) are used to group multiple agents into one logical group.  
+   **Usage:**  
+   - Use this node as much as possible  
+   - Only build jobs with label expressions matching this node   
+ 
+   **Launch method:**   
+   	  - Launch agent by connecting it to the master   
+   	  - Launch agent via execution of command on the controller  
+
+   **Custom WorkDir path:**  custom Remoting work directory will be used instead of the Agent Root Directory  
+   **- Use WebSocket [x]**  
+   **Availability:**  
+   	- Keep this agent online as much as possible  
+   	- Bring this agent online according to a schedule  
+   	- Bring this agent online when in demand, and take offline when idle 
+
+2. Once you save above configuration you will get a command which should be executed in the agent. it contains agent.jar, a secret-file, and a jnlp file 
+```sh
+     echo "secret_key" > secret-file
+     java -jar agent.jar -jnlpUrl http://<Jenkins_URL>/computer/abc/jenkins-agent.jnlp -secret @secret-file -workDir "/home/jenkins/jenkins-slave"
+   ```
+
+3. Once connected you can create or edit a job to chose this option in the `Restrict where this project can be run`
 
